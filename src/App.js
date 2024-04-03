@@ -1,6 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
 import Formulario from './Formulario.jsx';
+import PerfilPrivado from './PerfilPrivado.jsx';
+import PerfilPublico from './PerfilPublico.jsx';
+import { createBrowserRouter,} from "react-router-dom";
+
+const routes = [
+  {
+    path: "/",
+    element: <Formulario />,
+  },
+  {
+    path: "/",
+    element: <PerfilPrivado />,
+  },
+  {
+    path: "/",
+    element: <PerfilPublico />,
+  },
+]
+
+const router = createBrowserRouter(routes);
 
 function App() {
   return (
@@ -18,7 +38,6 @@ function App() {
         >
           Learn React
         </a>
-        <Formulario />
       </header>
     </div>
   );
